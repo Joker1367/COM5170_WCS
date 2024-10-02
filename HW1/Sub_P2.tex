@@ -1,0 +1,11 @@
+\vspace{-10pt}
+\begin{itemize}
+    \item[(a)] No. Recall that one Erlang $\leftrightarrow$ one hour of call traffic during one gour of 
+    operatiom. Therefore, the total traffic load cannot be greater than the number of available channel.
+    \item[(b)] However, there are some results from (a) that do not satisfy the requirement above i.e $\rho >
+    m$. The reason is that the actual traffic is determined by traffic load $\rho$ and blocking probability 
+    $B(\rho, m)$, that is
+    \begin{equation*}
+        \text{actual traffic} = \hat{\rho} = (1 - B(\rho, m)) \rho
+    \end{equation*}
+\end{itemize}

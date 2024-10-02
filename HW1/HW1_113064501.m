@@ -24,8 +24,8 @@ for m = 1 : 20
 
     for block_prob_idx = 1 : 4
         equation = log(block_prob(block_prob_idx)) == log(rho^m) - log_factorial - log(denominator);
-        solution = vpasolve(equation);
-        result(m, block_prob_idx) = double(max(real(solution)));
+        solution = vpasolve(equation, rho, 0.01);
+        result(m, block_prob_idx) = round(double(max(real(solution))), 4);
     end
 end
 
@@ -44,8 +44,8 @@ for m = 200:220
 
     for block_prob_idx = 1 : 4
         equation = log(block_prob(block_prob_idx)) == log(rho^m) - log_factorial - log(denominator);
-        solution = vpasolve(equation);
-        result(m - 199 + 20, block_prob_idx) = double(max(real(solution)));
+        solution = vpasolve(equation, rho, 0.01);
+        result(m - 199 + 20, block_prob_idx) = round(double(max(real(solution))), 4);
     end
 end
 
@@ -70,8 +70,8 @@ for operator_idx = 1:length(operator)
 
     for block_prob_idx = 1 : length(block_prob)
         equation = log(block_prob(block_prob_idx)) == log(rho^m) - log_factorial - log(denominator);
-        solution = vpasolve(equation);
+        solution = vpasolve(equation, rho, 0.01);
         traffic_load(operator_idx, block_prob_idx) = double(max(real(solution)));
-        trunking_efficiency(operator_idx, block_prob_idx) = traffic_load(operator_idx, block_prob_idx) / m;
+        trunking_efficiency(operator_idx, block_prob_idx) = round(traffic_load(operator_idx, block_prob_idx) / m,4);
     end
 end

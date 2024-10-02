@@ -1,0 +1,44 @@
+Suppose there are $k$ operator with frequency reuse factor $N$, then the number of channel in each cell is
+\begin{equation*}
+    m = \frac{600}{kN}
+\end{equation*}
+Similiar to that in (a), we solve the traffic load under different blocking probability. The results are shown
+below
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            \textbf{k} & \textbf{$P_{\text{block}} = 1\%$} & \textbf{$P_{\text{block}} = 3\%$} & \textbf{$P_{\text{block}} = 5\%$} & \textbf{$P_{\text{block}} = 10\%$} \\
+            \hline
+            1 & 102.9636 & 110.6506 & 115.7705 & 126.0823 \\
+            \hline
+            2 & 46.9496  & 51.5697  & 54.5656  & 60.4013 \\
+            \hline
+            3 & 29.0074  & 32.4118  & 34.5959  & 38.7874 \\
+            \hline
+        \end{tabular}
+        \caption{table 3. traffic load under different number of operators}
+    \end{center}
+\end{table}
+\vspace{-20pt}
+The truncking efficieny $\eta_{T}$ is the offered traffic per channel, which is given by $\eta_{T} = \frac{\rho}{m}$.
+By translating the above traffic load into truncking efficieny, we have
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            \textbf{k} & \textbf{$P_{\text{block}} = 1\%$} & \textbf{$P_{\text{block}} = 3\%$} & \textbf{$P_{\text{block}} = 5\%$} & \textbf{$P_{\text{block}} = 10\%$} \\
+            \hline
+            1 & 0.8580 & 0.9221 & 0.9648 & 1.0507 \\
+            \hline
+            2 & 0.7825 & 0.8595  & 0.9094  & 1.0067 \\
+            \hline
+            3 & 0.7252 & 0.8103  & 0.8649  & 0.9697 \\
+            \hline
+        \end{tabular}
+        \caption{table 4. trunking efficiency under different number of operators}
+    \end{center}
+\end{table}
+\vspace{-20pt}
+It can be seen that no matter under which blocking probability, one operator always has the highest trunking efficiency.
+Hence, one user provides the highest spectral efficiency.
