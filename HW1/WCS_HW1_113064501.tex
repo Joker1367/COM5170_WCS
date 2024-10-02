@@ -1,0 +1,53 @@
+%\documentclass[A4,12pt]{article}
+\documentclass[letterpaper,12pt]{article}
+\usepackage{epsfig}
+\usepackage{float}
+\usepackage{amssymb,amsmath,latexsym}
+\usepackage[labelformat=empty]{caption}
+\usepackage{color}
+%\usepackage[abs]{overpic}
+
+\usepackage{graphicx}
+\usepackage{epstopdf}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{calc}
+\usetikzlibrary{scopes}
+\usetikzlibrary{shadows}
+\usetikzlibrary{chains}
+%\usetikzlibrary{shadows.blur}
+
+\topmargin      0in 
+\textheight     9.0in 
+\headheight     -0.0in 
+\headsep        0in
+\textwidth      6.5in 
+\oddsidemargin  0in 
+\evensidemargin 0in
+\parskip        0pt
+
+\newcommand{\slfrac}[2]{\left.#1\middle/#2\right.}
+\newcommand{\bm}    [1]{\mbox{\boldmath $#1$}}
+
+\newtheorem{thm}           {Theorem}
+\newtheorem{lemma}    [thm]{Lemma}
+\newtheorem{prop}     [thm]{Proposition}
+\newtheorem{property} [thm]{Property}
+\newtheorem{defin}    [thm]{Definition}
+\newtheorem{corollary}     {Corollary}
+
+\begin{document}
+  \noindent COM 5165 Multiple Antenna Communication \hfill 113064501 Chun-Ting Lin\\
+
+  \begin{center}
+    {\bf \large  Homework III}
+  \end{center}
+
+
+  %--------------------------------------------------------------
+  \begin{enumerate}
+    \item[{\bf 2. }]  \textbf{$\epsilon$-outage probability} \hfill \\
+      \input{Sub_P2.tex}
+  \end{enumerate}
+\end{document}
