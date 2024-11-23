@@ -1,0 +1,18 @@
+\begin{itemize}
+    \item[(a)] \textbf{Comparison of different combining} \hfill \\
+    In \textcolor{blue}{SC}, the receiver chooses the strongest path as the combined result. With \textcolor{blue}{more paths available}, the signal has a \textcolor{blue}{higher probability of benefiting from favorable fading conditions}, leading to a lower BER. \hfill
+
+    In \textcolor{blue}{MRC}, the receiver weights each path according to its channel gain. This approach achieves the same performance as \textcolor{blue}{Maximum Likelihood (ML) detection}, which is the optimal detection strategy. \hfill
+
+    In \textcolor{blue}{EGC}, the receiver weights each path equally. The performance of EGC \textcolor{blue}{lies between that of MRC and SC.} \hfill
+
+    In \textcolor{blue}{DC}, the receiver combines all paths directly, which may result in \textcolor{blue}{phase cancellation.} Consequently, the performance of DC is the poorest among the four combining schemes. \hfill
+
+    In conclusion, the diversity gain order of the four combining techniques is \textcolor{blue}{MRC > EGC > SC > DC.}
+    \item[(b)] \textbf{Comparison of different fading} \hfill \\
+    It can be seen that \textcolor{blue}{BER is lower under Rician fading.} This is because there
+is \textcolor{blue}{line-of-sight (LOS)} under Rician fading, which provides a \textcolor{blue}{stable} signal.
+On the other hand, by comparing the BER curves of $L = 1$ and $L = 4$ under different fading conditions, it can be seen that there is
+\textcolor{blue}{more diversity gain under Rayleigh fading.} The reason is that, without LOS, each
+path is more \textcolor{blue}{independent}, which increases the diversity gain.
+\end{itemize}
