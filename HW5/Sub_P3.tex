@@ -1,0 +1,28 @@
+Similar to that in problem 2, if the incidence angle of the desired signal is $\phi_i$, then the
+interference power is obtained as
+\begin{equation*}
+    \text{P}{\text{interference}} = P \cdot \sum{j \neq i} \left|e_r^{H}(\Omega_j) \cdot e_r(\Omega_i)\right|^2.
+\end{equation*}
+Hence, the signal-to-interference power ratio (SIR) is given by
+\begin{equation*}
+    \text{SIR} = \frac{\left|e_r^{H}(\Omega_i) \cdot e_r(\Omega_i)\right|^2}{\sum_{j \neq i} \left|e_r^{H}(\Omega_j) \cdot e_r(\Omega_i)\right|^2}.
+\end{equation*}
+The SIR of each signal is listed in the table below:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c|c|c|c|c}
+             & Signal 1 & Signal 2 & Signal 3 & Signal 4 & Signal 5 \\
+    \hline
+    SIR (dB) & 17.7617 & 1.0028 & 13.3221 & 17.8966 & 1.2187
+    \end{tabular}
+\end{table}
+From the table above, it can be observed that the SIR of signals 2 and 5 is close to one.
+The reason is that $\phi_2$ and $\phi_5$ are close to each other. The steering vector of signal 2
+also provides gain for signal 5, and vice versa. More precisely,
+\begin{equation*}
+    \left|e_r^{H}(\Omega_2) \cdot e_r(\Omega_2)\right|^2 \approx \left|e_r^{H}(\Omega_5) \cdot e_r(\Omega_2)\right|^2.
+\end{equation*}
+and
+\begin{equation*}
+    \left|e_r^{H}(\Omega_5) \cdot e_r(\Omega_5)\right|^2 \approx \left|e_r^{H}(\Omega_2) \cdot e_r(\Omega_5)\right|^2.
+\end{equation*}
