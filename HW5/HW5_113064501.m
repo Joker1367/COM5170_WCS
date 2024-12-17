@@ -40,7 +40,7 @@ end
 for l = 1 : L
     figure(pic_index);
     polarplot(azimuth_range, radiation_patterns(l, :));
-    title(sprintf('Radiation Pattern for Signal %d (Theta = %.2f degree)', l, 180 * angles(l) / pi));
+    title(sprintf('Radiation Pattern for Signal %d (phi = %.2f degree)', l, 180 * angles(l) / pi));
     pic_index = pic_index + 1;
 end
 
@@ -113,3 +113,24 @@ SIR_dB = 10 * log10(SIR_values);
 % Display results
 disp(sprintf('SIR (N = %d) values for each signal:', N));
 disp(SIR_dB);
+
+azimuth_range = linspace(-pi, pi, 10000);  % angle [-π, π]
+radiation_patterns = zeros(L, length(azimuth_range));
+
+% radiation pattern
+for l = 1 : L
+    w = steering_vectors(:, l);  % beamforming vector
+    for t = 1:length(azimuth_range)
+        phi = azimuth_range(t);  
+        a_phi = exp(-1j * 2 * pi * d * (0:N-1)' * cos(phi));  
+        radiation_patterns(l, t) = abs(w' * a_phi);      
+    end
+end
+
+% plot radiation pattern
+for l = 1 : L
+    figure(pic_index);
+    polarplot(azimuth_range, radiation_patterns(l, :));
+    title(sprintf('Radiation Pattern for Signal %d (phi = %.2f degree and Nr = 64)', l, 180 * angles(l) / pi));
+    pic_index = pic_index + 1;
+end

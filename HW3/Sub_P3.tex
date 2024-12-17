@@ -1,24 +1,24 @@
 
 \begin{itemize}
     \item \textbf{Filtered Gaussian Noise method} \hfill \\
-    In filtered gaussian noise method, we may notice that the fluctuation of the envelope 
-    increases as $f_mT$ getting bigger. On the other hand, the auto correlation is not affected 
+    In filtered gaussian noise method, we may notice that the \textcolor{blue}{fluctuation of the 
+    envelope increases as $f_mT$ getting bigger.} On the other hand, the auto correlation is not affected 
     by $f_mT$ a lot.
     \begin{itemize}
-        \item Advantage: Different paths are uncorrelated.
+        \item Advantage: Different paths are \textcolor{blue}{uncorrelated.}
         \item Disadvantage: This method is based on first-order filter. Therefore, the power 
-        spectrum density of the generated siganl is much different from the ideal case (U shape).
-        To have a more accurate result, we can use a higher order filter, which increases the complexity.
+        spectrum density of the generated siganl is much \textcolor{blue}{different from the ideal case 
+        (U shape).} To have a more accurate result, we can use a higher order filter, which increases the complexity.
     \end{itemize}
     \item \textbf{Sum of Sinusoids method} \hfill \\
-    In sum of sinusoids method, we may notice that the fluctuation of the envelope 
-    increases as $f_mT$ getting bigger. Moreover, autocorrelation behaves more like the ideal 
-    autocorrelation as $M$ increases. That is, for larger $M$, the undesired behavior occurs 
+    In sum of sinusoids method, we may notice that \textcolor{blue}{the fluctuation of the envelope 
+    increases as $f_mT$ getting bigger.} Moreover, \textcolor{blue}{autocorrelation behaves more like the ideal 
+    autocorrelation as $M$ increases.} That is, for larger $M$, the undesired behavior occurs 
     later.
     \begin{itemize}
-        \item Advanatges: generate isotropic scattering fading environment with low complexity 
+        \item Advanatges: generate \textcolor{blue}{isotropic scattering} fading environment with low complexity 
         by using less oscillator.
-        \item Disadvantage: There's no randomness in the generating process. Therefore, in order
+        \item Disadvantage: There's \textcolor{blue}{no randomness} in the generating process. Therefore, in order
         to use it for modeling the real case, some modification is needed. For example, different 
         simulation should start from different point to confront different fading.
     \end{itemize}
